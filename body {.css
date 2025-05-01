@@ -1,0 +1,115 @@
+body {
+  background: url('c:\Users\fetra\Downloads\Kobo-Kanaeru_pr-img_01.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Comic Neue', cursive, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  animation: backgroundMove 30s linear infinite;
+}
+
+@keyframes backgroundMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.container {
+  background: rgba(255, 240, 246, 0.85);
+  border-radius: 25px;
+  box-shadow: 0 8px 15px rgba(255, 105, 180, 0.3);
+  padding: 40px 60px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.title {
+  color: #d6336c;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #ffb6c1;
+}
+
+.love-icon {
+  width: 120px;
+  margin-bottom: 30px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.confess-btn {
+  background-color: #ff6f91;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.3rem;
+  padding: 15px 40px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(255, 111, 145, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.confess-btn:hover {
+  background-color: #ff4a6e;
+  transform: scale(1.1);
+}
+
+.choice-buttons {
+  margin-top: 20px;
+}
+
+.choice-btn {
+  background-color: #ff6f91;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 30px;
+  margin: 0 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(255, 111, 145, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.choice-btn:hover {
+  background-color: #ff4a6e;
+  transform: scale(1.1);
+}
+
+.choice-btn#noBtn:hover {
+  animation: shake 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.choice-btn#noBtn:active {
+  animation: shake 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-10deg); }
+  40% { transform: rotate(10deg); }
+  60% { transform: rotate(-10deg); }
+  80% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.message {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: #d6336c;
+  min-height: 2em;
+  font-weight: 700;
+}
